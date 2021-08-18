@@ -1,0 +1,57 @@
+[2021-06-23 23:27:58,542][utils.py][line:129][INFO] Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+[2021-06-23 23:27:58,542][utils.py][line:141][INFO] NumExpr defaulting to 8 threads.
+[2021-06-23 23:27:58,826][preprocess.py][line:81][INFO] building src vocabulary...
+[2021-06-23 23:30:33,054][preprocess.py][line:83][INFO] building tgt vocabulary...
+[2021-06-23 23:31:42,611][preprocess.py][line:104][INFO] train and val data cache alreadly existed
+[2021-06-23 23:31:42,612][preprocess.py][line:106][INFO] src vocab size:24454 tgt vocab size:6870 train examples:282305 val examples:31368
+[2021-06-23 23:31:47,311][train.py][line:268][INFO] ==== Training/Evaluation Parameters: =====
+[2021-06-23 23:31:47,312][train.py][line:270][INFO] 	adam_eps=1e-09
+[2021-06-23 23:31:47,312][train.py][line:270][INFO] 	batch_size=200
+[2021-06-23 23:31:47,312][train.py][line:270][INFO] 	beta1=0.9
+[2021-06-23 23:31:47,312][train.py][line:270][INFO] 	beta2=0.98
+[2021-06-23 23:31:47,312][train.py][line:270][INFO] 	checkpoints=./checkpoints
+[2021-06-23 23:31:47,312][train.py][line:270][INFO] 	cuda=True
+[2021-06-23 23:31:47,312][train.py][line:270][INFO] 	d_ff=2048
+[2021-06-23 23:31:47,312][train.py][line:270][INFO] 	d_k=64
+[2021-06-23 23:31:47,312][train.py][line:270][INFO] 	d_model=512
+[2021-06-23 23:31:47,312][train.py][line:270][INFO] 	d_v=64
+[2021-06-23 23:31:47,312][train.py][line:270][INFO] 	data_dir=./data/news-commentary-v16.en-zh.tsv
+[2021-06-23 23:31:47,312][train.py][line:270][INFO] 	device=cuda
+[2021-06-23 23:31:47,312][train.py][line:270][INFO] 	drop=0.1
+[2021-06-23 23:31:47,312][train.py][line:270][INFO] 	epochs=30
+[2021-06-23 23:31:47,312][train.py][line:270][INFO] 	eval=False
+[2021-06-23 23:31:47,312][train.py][line:270][INFO] 	labelsmooth=True
+[2021-06-23 23:31:47,312][train.py][line:270][INFO] 	log=True
+[2021-06-23 23:31:47,312][train.py][line:270][INFO] 	log_dir=./results/logs
+[2021-06-23 23:31:47,312][train.py][line:270][INFO] 	log_step=200
+[2021-06-23 23:31:47,312][train.py][line:270][INFO] 	min_freq=1
+[2021-06-23 23:31:47,313][train.py][line:270][INFO] 	num_head=8
+[2021-06-23 23:31:47,313][train.py][line:270][INFO] 	num_layer=6
+[2021-06-23 23:31:47,313][train.py][line:270][INFO] 	overwrite_data_cache=False
+[2021-06-23 23:31:47,313][train.py][line:270][INFO] 	overwrite_transform=False
+[2021-06-23 23:31:47,313][train.py][line:270][INFO] 	pad_idx=1
+[2021-06-23 23:31:47,313][train.py][line:270][INFO] 	result_dir=./results
+[2021-06-23 23:31:47,313][train.py][line:270][INFO] 	save_step=1000
+[2021-06-23 23:31:47,313][train.py][line:270][INFO] 	scale_emb=True
+[2021-06-23 23:31:47,313][train.py][line:270][INFO] 	seed=123
+[2021-06-23 23:31:47,313][train.py][line:270][INFO] 	share_emb_weight=False
+[2021-06-23 23:31:47,313][train.py][line:270][INFO] 	share_proj_weight=True
+[2021-06-23 23:31:47,313][train.py][line:270][INFO] 	smooth_eps=0.1
+[2021-06-23 23:31:47,313][train.py][line:270][INFO] 	src_lang=en
+[2021-06-23 23:31:47,313][train.py][line:270][INFO] 	src_max_seq_len=100
+[2021-06-23 23:31:47,313][train.py][line:270][INFO] 	src_tokenizer_dir=./models/bert-base-uncased
+[2021-06-23 23:31:47,313][train.py][line:270][INFO] 	src_vocab_size=24454
+[2021-06-23 23:31:47,313][train.py][line:270][INFO] 	task_name=en_zh_translation
+[2021-06-23 23:31:47,313][train.py][line:270][INFO] 	tgt_lang=zh
+[2021-06-23 23:31:47,313][train.py][line:270][INFO] 	tgt_max_seq_len=100
+[2021-06-23 23:31:47,313][train.py][line:270][INFO] 	tgt_tokenizer_dir=./models/bert-base-chinese
+[2021-06-23 23:31:47,313][train.py][line:270][INFO] 	tgt_vocab_size=6870
+[2021-06-23 23:31:47,313][train.py][line:270][INFO] 	train=False
+[2021-06-23 23:31:47,313][train.py][line:270][INFO] 	train_data_cache=./data/train_data_cache.pkl
+[2021-06-23 23:31:47,313][train.py][line:270][INFO] 	transform_dir=./checkpoints/transforms.pkl
+[2021-06-23 23:31:47,314][train.py][line:270][INFO] 	use_tb=True
+[2021-06-23 23:31:47,314][train.py][line:270][INFO] 	val_data_cache=./data/val_data_cache.pkl
+[2021-06-23 23:31:47,314][train.py][line:270][INFO] 	warmup_proportion=0.1
+[2021-06-23 23:31:47,314][train.py][line:271][INFO] ==== Parameters End =====
+
+[2021-06-23 23:31:47,314][train.py][line:286][INFO] ==== Experiment End-total time:230.3697452545166=====

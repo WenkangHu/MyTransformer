@@ -1,0 +1,22 @@
+{
+  "model_checkpoint": "./checkpoints/8000.pth",
+  "val_data_cache":"./data/val_data_cache.pkl",
+  "cuda": true,
+  "transform_dir": "./checkpoints/transforms.pkl",
+  "src_max_seq_len": 100,
+  "tgt_max_seq_len": 100,
+  "min_freq": 1,
+  "pad_idx": 1,
+  "bos_idx": 2,
+  "eos_idx": 3,
+  "num_layer": 6,
+  "num_head": 8,
+  "d_k": 64,
+  "d_v": 64,
+  "d_model": 512,
+  "d_ff": 2048,
+  "drop": 0.1,
+  "scale_emb": true,
+  "share_proj_weight": true,
+  "share_emb_weight": false
+}

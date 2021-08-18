@@ -1,0 +1,421 @@
+[2021-06-23 11:52:33,086][utils.py][line:129][INFO] Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+[2021-06-23 11:52:33,097][utils.py][line:141][INFO] NumExpr defaulting to 8 threads.
+[2021-06-23 11:52:34,181][preprocess.py][line:89][INFO] load src_vocab from ./checkpoints/vocabs/en-src_vocab.pkl
+[2021-06-23 11:52:34,367][preprocess.py][line:97][INFO] load tgt_vocab from ./checkpoints/vocabs/zh-tgt_vocab.pkl
+[2021-06-23 11:52:34,369][preprocess.py][line:109][INFO] train and val data cache alreadly existed
+[2021-06-23 11:52:34,370][preprocess.py][line:111][INFO] src vocab size:24454 tgt vocab size:6870 train examples:282305 val examples:31368
+[2021-06-23 11:52:49,586][train.py][line:264][INFO] ==== Model Structure: =====
+[2021-06-23 11:52:49,588][train.py][line:265][INFO] Transformer(
+  (encoder): Encoder(
+    (src_emb): Embedding(24454, 512, padding_idx=1)
+    (pos_enc): PosEncoding()
+    (dropout): Dropout(p=0.1, inplace=False)
+    (layers): ModuleList(
+      (0): EncoderLayer(
+        (enc_MHA): MultiHeadAttention(
+          (Wq): Linear(in_features=512, out_features=512, bias=True)
+          (Wk): Linear(in_features=512, out_features=512, bias=True)
+          (Wv): Linear(in_features=512, out_features=512, bias=True)
+          (attention): ScaledDotProductAttention(
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+          (dropout): Dropout(p=0.1, inplace=False)
+          (project): Linear(in_features=512, out_features=512, bias=True)
+          (norm): LayerNorm()
+        )
+        (FFN): FFN(
+          (ffn): Sequential(
+            (0): Linear(in_features=512, out_features=2048, bias=True)
+            (1): ReLU()
+            (2): Dropout(p=0.1, inplace=False)
+            (3): Linear(in_features=2048, out_features=512, bias=True)
+          )
+          (dropout): Dropout(p=0.1, inplace=False)
+          (norm): LayerNorm()
+        )
+      )
+      (1): EncoderLayer(
+        (enc_MHA): MultiHeadAttention(
+          (Wq): Linear(in_features=512, out_features=512, bias=True)
+          (Wk): Linear(in_features=512, out_features=512, bias=True)
+          (Wv): Linear(in_features=512, out_features=512, bias=True)
+          (attention): ScaledDotProductAttention(
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+          (dropout): Dropout(p=0.1, inplace=False)
+          (project): Linear(in_features=512, out_features=512, bias=True)
+          (norm): LayerNorm()
+        )
+        (FFN): FFN(
+          (ffn): Sequential(
+            (0): Linear(in_features=512, out_features=2048, bias=True)
+            (1): ReLU()
+            (2): Dropout(p=0.1, inplace=False)
+            (3): Linear(in_features=2048, out_features=512, bias=True)
+          )
+          (dropout): Dropout(p=0.1, inplace=False)
+          (norm): LayerNorm()
+        )
+      )
+      (2): EncoderLayer(
+        (enc_MHA): MultiHeadAttention(
+          (Wq): Linear(in_features=512, out_features=512, bias=True)
+          (Wk): Linear(in_features=512, out_features=512, bias=True)
+          (Wv): Linear(in_features=512, out_features=512, bias=True)
+          (attention): ScaledDotProductAttention(
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+          (dropout): Dropout(p=0.1, inplace=False)
+          (project): Linear(in_features=512, out_features=512, bias=True)
+          (norm): LayerNorm()
+        )
+        (FFN): FFN(
+          (ffn): Sequential(
+            (0): Linear(in_features=512, out_features=2048, bias=True)
+            (1): ReLU()
+            (2): Dropout(p=0.1, inplace=False)
+            (3): Linear(in_features=2048, out_features=512, bias=True)
+          )
+          (dropout): Dropout(p=0.1, inplace=False)
+          (norm): LayerNorm()
+        )
+      )
+      (3): EncoderLayer(
+        (enc_MHA): MultiHeadAttention(
+          (Wq): Linear(in_features=512, out_features=512, bias=True)
+          (Wk): Linear(in_features=512, out_features=512, bias=True)
+          (Wv): Linear(in_features=512, out_features=512, bias=True)
+          (attention): ScaledDotProductAttention(
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+          (dropout): Dropout(p=0.1, inplace=False)
+          (project): Linear(in_features=512, out_features=512, bias=True)
+          (norm): LayerNorm()
+        )
+        (FFN): FFN(
+          (ffn): Sequential(
+            (0): Linear(in_features=512, out_features=2048, bias=True)
+            (1): ReLU()
+            (2): Dropout(p=0.1, inplace=False)
+            (3): Linear(in_features=2048, out_features=512, bias=True)
+          )
+          (dropout): Dropout(p=0.1, inplace=False)
+          (norm): LayerNorm()
+        )
+      )
+      (4): EncoderLayer(
+        (enc_MHA): MultiHeadAttention(
+          (Wq): Linear(in_features=512, out_features=512, bias=True)
+          (Wk): Linear(in_features=512, out_features=512, bias=True)
+          (Wv): Linear(in_features=512, out_features=512, bias=True)
+          (attention): ScaledDotProductAttention(
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+          (dropout): Dropout(p=0.1, inplace=False)
+          (project): Linear(in_features=512, out_features=512, bias=True)
+          (norm): LayerNorm()
+        )
+        (FFN): FFN(
+          (ffn): Sequential(
+            (0): Linear(in_features=512, out_features=2048, bias=True)
+            (1): ReLU()
+            (2): Dropout(p=0.1, inplace=False)
+            (3): Linear(in_features=2048, out_features=512, bias=True)
+          )
+          (dropout): Dropout(p=0.1, inplace=False)
+          (norm): LayerNorm()
+        )
+      )
+      (5): EncoderLayer(
+        (enc_MHA): MultiHeadAttention(
+          (Wq): Linear(in_features=512, out_features=512, bias=True)
+          (Wk): Linear(in_features=512, out_features=512, bias=True)
+          (Wv): Linear(in_features=512, out_features=512, bias=True)
+          (attention): ScaledDotProductAttention(
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+          (dropout): Dropout(p=0.1, inplace=False)
+          (project): Linear(in_features=512, out_features=512, bias=True)
+          (norm): LayerNorm()
+        )
+        (FFN): FFN(
+          (ffn): Sequential(
+            (0): Linear(in_features=512, out_features=2048, bias=True)
+            (1): ReLU()
+            (2): Dropout(p=0.1, inplace=False)
+            (3): Linear(in_features=2048, out_features=512, bias=True)
+          )
+          (dropout): Dropout(p=0.1, inplace=False)
+          (norm): LayerNorm()
+        )
+      )
+    )
+  )
+  (decoder): Decoder(
+    (tgt_emb): Embedding(6870, 512, padding_idx=1)
+    (pos_enc): PosEncoding()
+    (dropout): Dropout(p=0.1, inplace=False)
+    (layers): ModuleList(
+      (0): DecoderLayer(
+        (dec_MHA): MultiHeadAttention(
+          (Wq): Linear(in_features=512, out_features=512, bias=True)
+          (Wk): Linear(in_features=512, out_features=512, bias=True)
+          (Wv): Linear(in_features=512, out_features=512, bias=True)
+          (attention): ScaledDotProductAttention(
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+          (dropout): Dropout(p=0.1, inplace=False)
+          (project): Linear(in_features=512, out_features=512, bias=True)
+          (norm): LayerNorm()
+        )
+        (enc_dec_MHA): MultiHeadAttention(
+          (Wq): Linear(in_features=512, out_features=512, bias=True)
+          (Wk): Linear(in_features=512, out_features=512, bias=True)
+          (Wv): Linear(in_features=512, out_features=512, bias=True)
+          (attention): ScaledDotProductAttention(
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+          (dropout): Dropout(p=0.1, inplace=False)
+          (project): Linear(in_features=512, out_features=512, bias=True)
+          (norm): LayerNorm()
+        )
+        (FFN): FFN(
+          (ffn): Sequential(
+            (0): Linear(in_features=512, out_features=2048, bias=True)
+            (1): ReLU()
+            (2): Dropout(p=0.1, inplace=False)
+            (3): Linear(in_features=2048, out_features=512, bias=True)
+          )
+          (dropout): Dropout(p=0.1, inplace=False)
+          (norm): LayerNorm()
+        )
+      )
+      (1): DecoderLayer(
+        (dec_MHA): MultiHeadAttention(
+          (Wq): Linear(in_features=512, out_features=512, bias=True)
+          (Wk): Linear(in_features=512, out_features=512, bias=True)
+          (Wv): Linear(in_features=512, out_features=512, bias=True)
+          (attention): ScaledDotProductAttention(
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+          (dropout): Dropout(p=0.1, inplace=False)
+          (project): Linear(in_features=512, out_features=512, bias=True)
+          (norm): LayerNorm()
+        )
+        (enc_dec_MHA): MultiHeadAttention(
+          (Wq): Linear(in_features=512, out_features=512, bias=True)
+          (Wk): Linear(in_features=512, out_features=512, bias=True)
+          (Wv): Linear(in_features=512, out_features=512, bias=True)
+          (attention): ScaledDotProductAttention(
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+          (dropout): Dropout(p=0.1, inplace=False)
+          (project): Linear(in_features=512, out_features=512, bias=True)
+          (norm): LayerNorm()
+        )
+        (FFN): FFN(
+          (ffn): Sequential(
+            (0): Linear(in_features=512, out_features=2048, bias=True)
+            (1): ReLU()
+            (2): Dropout(p=0.1, inplace=False)
+            (3): Linear(in_features=2048, out_features=512, bias=True)
+          )
+          (dropout): Dropout(p=0.1, inplace=False)
+          (norm): LayerNorm()
+        )
+      )
+      (2): DecoderLayer(
+        (dec_MHA): MultiHeadAttention(
+          (Wq): Linear(in_features=512, out_features=512, bias=True)
+          (Wk): Linear(in_features=512, out_features=512, bias=True)
+          (Wv): Linear(in_features=512, out_features=512, bias=True)
+          (attention): ScaledDotProductAttention(
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+          (dropout): Dropout(p=0.1, inplace=False)
+          (project): Linear(in_features=512, out_features=512, bias=True)
+          (norm): LayerNorm()
+        )
+        (enc_dec_MHA): MultiHeadAttention(
+          (Wq): Linear(in_features=512, out_features=512, bias=True)
+          (Wk): Linear(in_features=512, out_features=512, bias=True)
+          (Wv): Linear(in_features=512, out_features=512, bias=True)
+          (attention): ScaledDotProductAttention(
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+          (dropout): Dropout(p=0.1, inplace=False)
+          (project): Linear(in_features=512, out_features=512, bias=True)
+          (norm): LayerNorm()
+        )
+        (FFN): FFN(
+          (ffn): Sequential(
+            (0): Linear(in_features=512, out_features=2048, bias=True)
+            (1): ReLU()
+            (2): Dropout(p=0.1, inplace=False)
+            (3): Linear(in_features=2048, out_features=512, bias=True)
+          )
+          (dropout): Dropout(p=0.1, inplace=False)
+          (norm): LayerNorm()
+        )
+      )
+      (3): DecoderLayer(
+        (dec_MHA): MultiHeadAttention(
+          (Wq): Linear(in_features=512, out_features=512, bias=True)
+          (Wk): Linear(in_features=512, out_features=512, bias=True)
+          (Wv): Linear(in_features=512, out_features=512, bias=True)
+          (attention): ScaledDotProductAttention(
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+          (dropout): Dropout(p=0.1, inplace=False)
+          (project): Linear(in_features=512, out_features=512, bias=True)
+          (norm): LayerNorm()
+        )
+        (enc_dec_MHA): MultiHeadAttention(
+          (Wq): Linear(in_features=512, out_features=512, bias=True)
+          (Wk): Linear(in_features=512, out_features=512, bias=True)
+          (Wv): Linear(in_features=512, out_features=512, bias=True)
+          (attention): ScaledDotProductAttention(
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+          (dropout): Dropout(p=0.1, inplace=False)
+          (project): Linear(in_features=512, out_features=512, bias=True)
+          (norm): LayerNorm()
+        )
+        (FFN): FFN(
+          (ffn): Sequential(
+            (0): Linear(in_features=512, out_features=2048, bias=True)
+            (1): ReLU()
+            (2): Dropout(p=0.1, inplace=False)
+            (3): Linear(in_features=2048, out_features=512, bias=True)
+          )
+          (dropout): Dropout(p=0.1, inplace=False)
+          (norm): LayerNorm()
+        )
+      )
+      (4): DecoderLayer(
+        (dec_MHA): MultiHeadAttention(
+          (Wq): Linear(in_features=512, out_features=512, bias=True)
+          (Wk): Linear(in_features=512, out_features=512, bias=True)
+          (Wv): Linear(in_features=512, out_features=512, bias=True)
+          (attention): ScaledDotProductAttention(
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+          (dropout): Dropout(p=0.1, inplace=False)
+          (project): Linear(in_features=512, out_features=512, bias=True)
+          (norm): LayerNorm()
+        )
+        (enc_dec_MHA): MultiHeadAttention(
+          (Wq): Linear(in_features=512, out_features=512, bias=True)
+          (Wk): Linear(in_features=512, out_features=512, bias=True)
+          (Wv): Linear(in_features=512, out_features=512, bias=True)
+          (attention): ScaledDotProductAttention(
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+          (dropout): Dropout(p=0.1, inplace=False)
+          (project): Linear(in_features=512, out_features=512, bias=True)
+          (norm): LayerNorm()
+        )
+        (FFN): FFN(
+          (ffn): Sequential(
+            (0): Linear(in_features=512, out_features=2048, bias=True)
+            (1): ReLU()
+            (2): Dropout(p=0.1, inplace=False)
+            (3): Linear(in_features=2048, out_features=512, bias=True)
+          )
+          (dropout): Dropout(p=0.1, inplace=False)
+          (norm): LayerNorm()
+        )
+      )
+      (5): DecoderLayer(
+        (dec_MHA): MultiHeadAttention(
+          (Wq): Linear(in_features=512, out_features=512, bias=True)
+          (Wk): Linear(in_features=512, out_features=512, bias=True)
+          (Wv): Linear(in_features=512, out_features=512, bias=True)
+          (attention): ScaledDotProductAttention(
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+          (dropout): Dropout(p=0.1, inplace=False)
+          (project): Linear(in_features=512, out_features=512, bias=True)
+          (norm): LayerNorm()
+        )
+        (enc_dec_MHA): MultiHeadAttention(
+          (Wq): Linear(in_features=512, out_features=512, bias=True)
+          (Wk): Linear(in_features=512, out_features=512, bias=True)
+          (Wv): Linear(in_features=512, out_features=512, bias=True)
+          (attention): ScaledDotProductAttention(
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+          (dropout): Dropout(p=0.1, inplace=False)
+          (project): Linear(in_features=512, out_features=512, bias=True)
+          (norm): LayerNorm()
+        )
+        (FFN): FFN(
+          (ffn): Sequential(
+            (0): Linear(in_features=512, out_features=2048, bias=True)
+            (1): ReLU()
+            (2): Dropout(p=0.1, inplace=False)
+            (3): Linear(in_features=2048, out_features=512, bias=True)
+          )
+          (dropout): Dropout(p=0.1, inplace=False)
+          (norm): LayerNorm()
+        )
+      )
+    )
+  )
+  (project): Linear(in_features=512, out_features=6870, bias=False)
+)
+[2021-06-23 11:52:49,608][train.py][line:267][INFO] ==== Training/Evaluation Parameters: =====
+[2021-06-23 11:52:49,609][train.py][line:269][INFO] 	adam_eps=1e-09
+[2021-06-23 11:52:49,609][train.py][line:269][INFO] 	batch_size=256
+[2021-06-23 11:52:49,610][train.py][line:269][INFO] 	beta1=0.9
+[2021-06-23 11:52:49,611][train.py][line:269][INFO] 	beta2=0.98
+[2021-06-23 11:52:49,612][train.py][line:269][INFO] 	checkpoints=./checkpoints
+[2021-06-23 11:52:49,612][train.py][line:269][INFO] 	cuda=True
+[2021-06-23 11:52:49,613][train.py][line:269][INFO] 	d_ff=2048
+[2021-06-23 11:52:49,614][train.py][line:269][INFO] 	d_k=64
+[2021-06-23 11:52:49,614][train.py][line:269][INFO] 	d_model=512
+[2021-06-23 11:52:49,615][train.py][line:269][INFO] 	d_v=64
+[2021-06-23 11:52:49,616][train.py][line:269][INFO] 	data_dir=./data/news-commentary-v16.en-zh.tsv
+[2021-06-23 11:52:49,617][train.py][line:269][INFO] 	device=cuda
+[2021-06-23 11:52:49,617][train.py][line:269][INFO] 	drop=0.1
+[2021-06-23 11:52:49,618][train.py][line:269][INFO] 	epochs=10
+[2021-06-23 11:52:49,619][train.py][line:269][INFO] 	eval=True
+[2021-06-23 11:52:49,619][train.py][line:269][INFO] 	labelsmooth=True
+[2021-06-23 11:52:49,620][train.py][line:269][INFO] 	log=True
+[2021-06-23 11:52:49,621][train.py][line:269][INFO] 	log_dir=./results/logs
+[2021-06-23 11:52:49,621][train.py][line:269][INFO] 	log_step=200
+[2021-06-23 11:52:49,622][train.py][line:269][INFO] 	min_freq=1
+[2021-06-23 11:52:49,623][train.py][line:269][INFO] 	num_head=8
+[2021-06-23 11:52:49,626][train.py][line:269][INFO] 	num_layer=6
+[2021-06-23 11:52:49,632][train.py][line:269][INFO] 	overwrite_data_cache=False
+[2021-06-23 11:52:49,638][train.py][line:269][INFO] 	overwrite_vocab=False
+[2021-06-23 11:52:49,640][train.py][line:269][INFO] 	pad_idx=1
+[2021-06-23 11:52:49,641][train.py][line:269][INFO] 	result_dir=./results
+[2021-06-23 11:52:49,642][train.py][line:269][INFO] 	save_step=1000
+[2021-06-23 11:52:49,643][train.py][line:269][INFO] 	scale_emb=True
+[2021-06-23 11:52:49,643][train.py][line:269][INFO] 	seed=123
+[2021-06-23 11:52:49,643][train.py][line:269][INFO] 	share_emb_weight=False
+[2021-06-23 11:52:49,643][train.py][line:269][INFO] 	share_proj_weight=True
+[2021-06-23 11:52:49,644][train.py][line:269][INFO] 	smooth_eps=0.1
+[2021-06-23 11:52:49,644][train.py][line:269][INFO] 	src_lang=en
+[2021-06-23 11:52:49,644][train.py][line:269][INFO] 	src_max_seq_len=100
+[2021-06-23 11:52:49,645][train.py][line:269][INFO] 	src_tokenizer_dir=./models/bert-base-uncased
+[2021-06-23 11:52:49,645][train.py][line:269][INFO] 	src_vocab_dir=./checkpoints/vocabs/en-src_vocab.pkl
+[2021-06-23 11:52:49,645][train.py][line:269][INFO] 	src_vocab_size=24454
+[2021-06-23 11:52:49,646][train.py][line:269][INFO] 	task_name=en_zh_translation
+[2021-06-23 11:52:49,646][train.py][line:269][INFO] 	tgt_lang=zh
+[2021-06-23 11:52:49,646][train.py][line:269][INFO] 	tgt_max_seq_len=100
+[2021-06-23 11:52:49,646][train.py][line:269][INFO] 	tgt_tokenizer_dir=./models/bert-base-chinese
+[2021-06-23 11:52:49,647][train.py][line:269][INFO] 	tgt_vocab_dir=./checkpoints/vocabs/zh-tgt_vocab.pkl
+[2021-06-23 11:52:49,647][train.py][line:269][INFO] 	tgt_vocab_size=6870
+[2021-06-23 11:52:49,647][train.py][line:269][INFO] 	train=True
+[2021-06-23 11:52:49,647][train.py][line:269][INFO] 	train_data_cache=./data/train_data_cache.pkl
+[2021-06-23 11:52:49,648][train.py][line:269][INFO] 	use_tb=True
+[2021-06-23 11:52:49,648][train.py][line:269][INFO] 	val_data_cache=./data/val_data_cache.pkl
+[2021-06-23 11:52:49,648][train.py][line:269][INFO] 	vocab_dir=./checkpoints/vocabs
+[2021-06-23 11:52:49,649][train.py][line:269][INFO] 	warmup_proportion=0.1
+[2021-06-23 11:52:49,649][train.py][line:270][INFO] ==== Parameters End =====
+
+[2021-06-23 11:52:49,649][train.py][line:273][INFO] ==== Train Start=====
+[2021-06-23 11:52:50,290][train.py][line:147][INFO] Total train steps: 11030
+[2021-06-23 11:52:50,291][train.py][line:148][INFO] ################################
