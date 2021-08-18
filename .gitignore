@@ -1,3 +1,4 @@
 checkpoints
 data/*
-models/*
+models/
+!data/news-commentary-v16.en-zh.tsv
